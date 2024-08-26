@@ -1,0 +1,222 @@
+/* Configurações de cores */
+:root {
+    --cor-primaria: #ff7500;
+    --cor-secundaria: #1e1e2d;
+    --cor-clara: #f8f9fa;
+    --cor-escura: #1e1e1e;
+    --cor-fonte-clara: #ffffff;
+    --cor-fonte-escura: #000000;
+    --cor-hover-clara: #e66900;
+    --cor-hover-escura: #e60000;
+}
+
+/* Estilo global */
+body {
+    background-color: var(--cor-clara);
+    color: var(--cor-fonte-escura);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte-clara);
+    padding:  0;
+    margin-bottom: 50px;
+}
+
+.title-container h1 {
+    margin-left: 55px;
+    margin-bottom: 20px;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch-container .form-label {
+    margin-right: 10px;
+    color: var(--cor-fonte-clara);
+    font-weight: bold;
+    
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+#formTarefa button[type="submit"] {
+    margin-top: 20px; 
+    margin-bottom: 30px;
+}
+
+.table {
+    margin-top: 30px; 
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #50cd89;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+/* Tabela de tarefas */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte-clara);
+}
+
+.table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-hover-clara);
+    border-color: var(--cor-hover-clara);
+}
+
+.btn-danger {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: var(--cor-hover-escura);
+    border-color: #d43f3a;
+}
+
+/* Formulários */
+.form-nova-tarefa {
+    margin-bottom: 3rem;
+}
+
+.form-group label {
+    color: var(--cor-secundaria);
+}
+
+.form-group input,
+.form-group textarea {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.alert-info {
+    margin-top: 5rem;
+    border-radius: 8px;
+}
+
+.night-mode {
+    --cor-primaria: #ff6f00;
+    --cor-secundaria: #1e1e2d;
+    --cor-clara: #1e1e1e;
+    --cor-escura: #151521;
+    --cor-fonte-clara: #f8f9fa;
+    --cor-fonte-escura: #ffffff;
+    --cor-hover-clara: #ff9000;
+    --cor-hover-escura: #ff0000;
+    background-color: var(--cor-escura);
+    color: var(--cor-fonte-clara);
+}
+.footer {
+    background-color: #1e1e2d;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
